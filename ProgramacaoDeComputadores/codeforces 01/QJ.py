@@ -15,3 +15,5 @@ print(c10, "nota(s) de R$ 10,00")
 print(c5, "nota(s) de R$ 5,00")
 print(c2, "nota(s) de R$ 2,00")
 print(c1, "nota(s) de R$ 1,00")
+print(c1, "nota(s) de R$ 1,00")
+
