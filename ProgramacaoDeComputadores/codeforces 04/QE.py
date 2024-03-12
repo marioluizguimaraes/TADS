@@ -1,10 +1,7 @@
-n = int(input())
-resultado = (n + 1)%2
-proximopar = 0
+l = int(input())
+c = int(input())
 
-if ( resultado == 0):
-    proximopar = n + 1
-else: 
-    proximopar = n + 2
-    
-print(proximopar)
+if ( ( l%2 != 0  and c%2 != 0 ) or (l%2 == 0 and c%2 == 0) ):
+    print("1")
+else:
+    print("0")

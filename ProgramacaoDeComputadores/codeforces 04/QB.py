@@ -1,41 +1,16 @@
 a, b, c, d = map(int, input().split())
 
-ab = a + b
-ac = a + c
-ad = a + d
-
-bc = b + c
-bd = b + d
-
-cd = d + c
-
-
-if (a < bc):
-    print("S")
-elif ( a < bd):
-    print("S")
-elif ( a < cd):
+if (a < b + c and  b < a + c and c < a + b ):
     print("S")
     
-elif ( b < ac):
-    print("S")
-elif ( b <  ad):
-    print("S")
-elif ( b < cd):
+elif (a < b + d and  b < a + d and d < a + b ):
     print("S")
     
-elif ( c < ab):
+elif (b < d + c and  c < d + b and d < c + b ):
     print("S")
-elif ( c < bd):
-    print("S")
-elif ( c < ad):
+
+elif (a < d + c and  c < d + a and d < c + a ):
     print("S")
     
-elif ( d < ab):
-    print("S")
-elif ( d < ac):
-    print("S")
-elif ( d < ab):
-    print("S")
 else:
     print("N")
