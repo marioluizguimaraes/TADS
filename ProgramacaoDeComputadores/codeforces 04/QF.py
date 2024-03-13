@@ -1,18 +1,11 @@
-c, q = map(int, input().split())
-valor = 0
-if(c == 1):
-    valor = 4.00 * q
+a11, a12 = map(int, input().split())
+a21, a22 = map(int, input().split())
+p1, p2   = map(int, input().split())
 
-elif( c == 2):  
-    valor = 4.50 * q 
+m1 = (a11*p1 + a12*p2)//(p1+p2)
+m2 = (a21*p1 + a22*p2)//(p1+p2)
 
-elif( c == 3):
-    valor = 5.00 * q 
-
-elif( c == 4):
-    valor = 2.00 * q
-
-elif( c == 5):
-    valor = 1.50 * q 
-
-print("Total: R$", "{:.2f}".format(valor))
+if (m1 >= m2):
+    print("1")
+else:
+    print("2")

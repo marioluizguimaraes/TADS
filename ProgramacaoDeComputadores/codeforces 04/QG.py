@@ -1,16 +1,10 @@
 n1 = int(input())
 n2 = int(input())
-resto = 0
- 
-if (n1 > n2):
-    resto = n1%n2
-    if (resto == 0):
-        print("Multiplos")
-    else:
-        print("Nao multiplos")
-else:
-    resto = n2%n1
-    if (resto == 0):
-        print("Multiplos")
-    else:
-        print("Nao multiplos")
+n3 = int(input())
+
+if ((n2 <= n1 and n3 >= n1) or (n3 <= n1 and n2 >= n1) ):
+    print(n1)
+elif ( (n1 <= n2 and n3 >= n2) or (n3 <= n2 and n1 >= n2)):
+    print(n2)
+elif ( (n1 <= n3 and n2 >= n3) or (n2 <= n3 and n1 >= n3) ):
+    print(n3)
