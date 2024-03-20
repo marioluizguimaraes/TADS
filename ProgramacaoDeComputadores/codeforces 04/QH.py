@@ -1,13 +1,14 @@
 c = int(input())
 a = int(input())
-
+viagens = 0
 if ( c > a):
     viagens = 1
 
-elif (a >= c ):
-    viagens = (a + a//c) //c + 1
+elif ( a == c):
+    viagens = 2
 
-    if (a%c != 0):
-        viagens = (a + a//c) //(c-1) 
+elif (a%c != 0):
+
+    viagens = (a + (a//(c-1)))//c
 
 print(viagens)
