@@ -7,8 +7,9 @@ if ( c > a):
 elif ( a == c):
     viagens = 2
 
-elif (a%c != 0):
-
+elif ((a + (a//(c-1)))%c != 0):
+    viagens = (a + (a//(c-1)))//c + 1
+else:
     viagens = (a + (a//(c-1)))//c
 
 print(viagens)
