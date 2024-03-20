@@ -16,7 +16,7 @@ if (a < b + c and  b < a + c and c < a + b ):
                 print("r") 
             else:
                 print("o") 
-        else:
+        elif (a >= b and a >= c):
             if ( pow(a,2) == pow(b,2) + pow(c,2)):
                 print("r") 
             else:
