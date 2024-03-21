@@ -1,16 +1,13 @@
 b = int(input())
 t = int(input())
 
-trapezio = ((b + t)*70)/2
-print(trapezio)
+trapeziobt = ((b + t)*70)/2
 
-if ( (b == 80 and t == 80 ) or (160 - t == b  and 160 - b == t )):
+if ( trapeziobt == 80*70  ):
     print("0")
 
-elif( b < 80 and t < 80):
+elif( trapeziobt < 80*70 ):
     print("2")
 
-elif( b > 80 and t > 80):
+elif( trapeziobt > 80*70):
     print("1")
-
-S
