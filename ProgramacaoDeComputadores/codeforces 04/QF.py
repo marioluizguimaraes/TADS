@@ -1,3 +1,4 @@
+#Maior média ponderada
 a11, a12 = map(int, input().split())
 a21, a22 = map(int, input().split())
 p1, p2   = map(int, input().split())

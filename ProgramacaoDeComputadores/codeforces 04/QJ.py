@@ -1,3 +1,4 @@
+#Nota Cortada
 b = int(input())
 t = int(input())
 
