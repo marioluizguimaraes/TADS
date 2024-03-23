@@ -1,8 +1,11 @@
 n1, d1, v1 = map(int, input().split())
 n2, d2, v2 = map(int, input().split())
 
-if (d1 <= d2 and d2/v2 <= d1/v1 ):
-    print(n2)
+t1 = d1/v1 
+t2 = d2/v2
 
-elif (d1 >= d2 and d2/v2 >= d1/v1 ):
+if ( t1 < t2 ):
     print(n1)
+
+elif ( t2 < t1 ):
+    print(n2)
