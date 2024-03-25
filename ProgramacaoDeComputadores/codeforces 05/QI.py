@@ -2,15 +2,13 @@ A1 = int(input())
 A2 = int(input())
 A3 = int(input())
 
-tempo = 0
+t1 = A2*2 + A3*4
+t2 = A1*2 + A3*2
+t3 = A1*4 + A2*2
 
-if ( A1 >= A2 and A1 >= A3 ):
-    tempo = A2*2 + A3*4
-
-elif ( A2 >= A1 and A2 >= A3 ):
-    tempo = A1*2 + A3*2
-
-elif ( A3 >= A1 and A3 >= A2 ):
-    tempo = A1*4 + A2*2
-
-print(tempo)
+if (t1 <= t2 and t1 <= t3):
+    print(t1)
+elif (t2 <= t1 and t2 <= t3):
+    print(t2)
+elif (t3 <= t2 and t3 <= t1):
+    print(t3)
