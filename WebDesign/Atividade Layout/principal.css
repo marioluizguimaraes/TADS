@@ -1,0 +1,14 @@
+h1{
+    text-align: center;
+}
+figure{
+    border: 2px solid #ffa60000;
+    text-align: center;
+}
+#galeria{
+    max-width: 1000px;
+    margin: 3em auto;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap
+}
