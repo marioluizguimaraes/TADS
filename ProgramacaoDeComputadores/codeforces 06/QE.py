@@ -1,16 +1,14 @@
-def dia(dia, mes, ano):
+def dia_da_semana(h,d):
+    dia = 0
     data = ""
-    if (dia > 31 or dia < 1 or mes > 12 or mes < 1 or ano > 10000):
-        data = "Data Invalida"
-    
-    
-        d = (d%7) + 1
-        if(d > 7):
-           d = (d%7) 
+    if (h == "Domingo"):
+        dia = (d%7) + 1
+        if(dia > 7):
+           dia = (dia%7) 
     elif(h == "Segunda-feira"):
-        d = (d%7) + 2
-        if(d > 7):
-           d = (d%7) 
+        dia = (d%7) + 2
+        if(dia > 7):
+           dia = (dia%7) 
     elif(h == "Terca-feira"):
         dia = (d%7) + 3
         if(dia > 7):
@@ -46,4 +44,15 @@ def dia(dia, mes, ano):
         data = "Sexta-feira"
     elif (dia == 7):
         data = "Sabado"   
+    
     return data
+
+
+hj = input()
+dias = int(input())
+
+print(dia_da_semana(hj,dias))
+    
+
+
+    
