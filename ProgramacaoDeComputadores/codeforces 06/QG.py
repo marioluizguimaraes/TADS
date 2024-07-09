@@ -1,48 +1,24 @@
-def verifc_mes(m):
-    mes = ""
-    if( m == 1):
-        mes = "janeiro"
-    elif(m == 2):
-        mes = "fevereiro"
-    elif(m == 3):
-        mes = "março"
-    elif(m == 4):
-        mes = "abriu"
-    elif(m == 5):
-        mes = "maio"
-    elif(m == 6):
-        mes = "junho"
-    elif(m == 7):
-        mes = "julho"
-    elif(m == 8):
-        mes = "agosto"
-    elif(m == 9):
-        mes = "setembro"
-    elif(m == 10):
-        mes = "outubro"
-    elif(m == 11):
-        mes = "novembro"
-    elif(m == 12):
-        mes = "dezembro" 
-    return mes
+
+
     
 def dia(dia, mes, ano):
     d = int(dia)
     m = int(mes)
     a = int(ano)
-    data = ""
-
-    if (d > 31 or d < 1 or m > 12 or m < 1 or a > 10000):
+    meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+    dias = [31,28,31,30,31,30,31,31,30,31,30,31]
+    if (a > 31 or a < 1 or m < 1 or m > 12 or a > 10000):
         data = "Data Invalida"
     
+    for i in range(0, 12):
+        if(m - 1 == i):
+            ms = meses[i]
+            dx = dias[i]
+    if(d > dx):
+        data = "Data Invalida"
     else:
-        a = str(ano)
-        if (d > 10):
-            d = "0" + str(dia)
-            data = d + " de " + verifc_mes(m) + " de " + a
-        else: 
-            data = dia + " de " + verifc_mes(m) + " de " + a
-
+        data = f'{d:02d} de {ms} de {ano}'
+        
     return data
     
 
