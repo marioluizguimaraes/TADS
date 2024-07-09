@@ -1,49 +1,50 @@
+def verifc_mes(m):
+    mes = ""
+    if( m == 1):
+        mes = "janeiro"
+    elif(m == 2):
+        mes = "fevereiro"
+    elif(m == 3):
+        mes = "março"
+    elif(m == 4):
+        mes = "abriu"
+    elif(m == 5):
+        mes = "maio"
+    elif(m == 6):
+        mes = "junho"
+    elif(m == 7):
+        mes = "julho"
+    elif(m == 8):
+        mes = "agosto"
+    elif(m == 9):
+        mes = "setembro"
+    elif(m == 10):
+        mes = "outubro"
+    elif(m == 11):
+        mes = "novembro"
+    elif(m == 12):
+        mes = "dezembro" 
+    return mes
+    
 def dia(dia, mes, ano):
+    d = int(dia)
+    m = int(mes)
+    a = int(ano)
     data = ""
-    if (dia > 31 or dia < 1 or mes > 12 or mes < 1 or ano > 10000):
+
+    if (d > 31 or d < 1 or m > 12 or m < 1 or a > 10000):
         data = "Data Invalida"
     
-    
-        d = (d%7) + 1
-        if(d > 7):
-           d = (d%7) 
-    elif(h == "Segunda-feira"):
-        d = (d%7) + 2
-        if(d > 7):
-           d = (d%7) 
-    elif(h == "Terca-feira"):
-        dia = (d%7) + 3
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Quarta-feira"):
-        dia = (d%7) + 4
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Quinta-feira"):
-        dia = (d%7) + 5
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Sexta-feira"):
-        dia = (d%7) + 6
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Sabado"):
-        dia = (d%7) + 7
-        if(dia > 7):
-           dia = (dia%7) 
- 
-    if (dia == 1):
-        data = "Domingo"
-    elif (dia == 2):
-        data = "Segunda-feira"
-    elif (dia == 3):
-        data = "Terca-feira"
-    elif (dia == 4):
-        data = "Quarta-feira"
-    elif (dia == 5):
-        data = "Quinta-feira"
-    elif (dia == 6):
-        data = "Sexta-feira"
-    elif (dia == 7):
-        data = "Sabado"   
+    else:
+        a = str(ano)
+        if (d > 10):
+            d = "0" + str(dia)
+            data = d + " de " + verifc_mes(m) + " de " + a
+        else: 
+            data = dia + " de " + verifc_mes(m) + " de " + a
+
     return data
+    
+
+d,m,a = map(str, input().split("/"))
+print(dia(d,m,a))
