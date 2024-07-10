@@ -1,49 +1,26 @@
+
+
+    
 def dia(dia, mes, ano):
-    data = ""
-    if (dia > 31 or dia < 1 or mes > 12 or mes < 1 or ano > 10000):
+    d = int(dia)
+    m = int(mes)
+    a = int(ano)
+    meses = ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+    dias = [31,28,31,30,31,30,31,31,30,31,30,31]
+    if (a > 31 or a < 1 or m < 1 or m > 12 or a > 10000):
         data = "Data Invalida"
     
-    
-        d = (d%7) + 1
-        if(d > 7):
-           d = (d%7) 
-    elif(h == "Segunda-feira"):
-        d = (d%7) + 2
-        if(d > 7):
-           d = (d%7) 
-    elif(h == "Terca-feira"):
-        dia = (d%7) + 3
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Quarta-feira"):
-        dia = (d%7) + 4
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Quinta-feira"):
-        dia = (d%7) + 5
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Sexta-feira"):
-        dia = (d%7) + 6
-        if(dia > 7):
-           dia = (dia%7) 
-    elif(h == "Sabado"):
-        dia = (d%7) + 7
-        if(dia > 7):
-           dia = (dia%7) 
- 
-    if (dia == 1):
-        data = "Domingo"
-    elif (dia == 2):
-        data = "Segunda-feira"
-    elif (dia == 3):
-        data = "Terca-feira"
-    elif (dia == 4):
-        data = "Quarta-feira"
-    elif (dia == 5):
-        data = "Quinta-feira"
-    elif (dia == 6):
-        data = "Sexta-feira"
-    elif (dia == 7):
-        data = "Sabado"   
+    for i in range(0, 12):
+        if(m - 1 == i):
+            ms = meses[i]
+            dx = dias[i]
+    if(d > dx):
+        data = "Data Invalida"
+    else:
+        data = f'{d:02d} de {ms} de {ano}'
+        
     return data
+    
+
+d,m,a = map(str, input().split("/"))
+print(dia(d,m,a))
