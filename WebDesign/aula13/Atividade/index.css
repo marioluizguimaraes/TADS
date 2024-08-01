@@ -26,7 +26,7 @@ header>nav>ol>li>a{
     padding: 5px 0px;
 }
 main{
-    width: 1400px;
+    width: 100vw;
     padding: 40px;
     background-color: rgb(255, 255, 255);
 }
@@ -49,8 +49,30 @@ main{
     flex-wrap: wrap;
 }
 #relatorios>.cards>.card{
-    width: 250px;
-    padding: 25px;
+    width: 210px;
     border: 1px solid rgb(131, 131, 131);
     background-color: rgb(235, 235, 235);
+}
+
+.card>p{
+    text-align: center;
+    height: 160px;
+    padding: 20px;
+}
+.card>p>a{
+    font-size: 18px;
+}
+.card>nav{   
+
+    background-color: rgb(255, 255, 255);
+}
+.card>nav>ul{
+    padding: 30px;
+    gap: 10px;
+    justify-content: center;
+    display: flex;
+    list-style-type: none;
+}
+.card>nav>ul>li>a{
+    color: rgb(38, 114, 35);
 }
