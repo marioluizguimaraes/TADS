@@ -3,10 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    height: 100vh;
-}
 header{
+    font-size: 20px;
     color: white;
     padding: 1.5em;
     font-weight: bold;
@@ -25,9 +23,8 @@ footer>p{
 }
 main{
     padding: 12px 0;
-    height: 73vh;
     display: grid;
-    grid-template-columns: 1fr .8fr 1fr 1fr 1fr;
+    grid-template-columns: 16.5em 16em auto 16em 16em;
     grid-template-areas: 
     "nav b1 tabela tabela imgA"
     "nav lista forms imgN imgH"
@@ -45,14 +42,14 @@ nav li>a{
     color: #327097;
     display: inline-block;
     padding: .8em 1em;
-    font-size: 25px;
+    font-size: 30px;
     font-family: 'Roboto Mono', monospace;
     text-decoration: none;
 }
 
 .box{
     padding: 2em; 
-    line-height: 1.8em;
+    line-height: 2em;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #d1d8dda1;
 }
@@ -63,10 +60,16 @@ nav li>a{
     grid-area: b1;
 }
 #box1 a{
+    display: inline-block;
+    margin: 1em 0;
     text-decoration: none;
     color: #224459;
-    padding: 5px;
+    padding: 0 5px;
     border: 1px solid #224459;
+}
+#box1 strong{
+
+    color: #224459;
 }
 #lista{
     grid-area: lista;
@@ -74,11 +77,28 @@ nav li>a{
 #forms{
     grid-area: forms;
 }
+#forms input[type=text], #forms input[type=tel], #forms input[type=email]{
+    margin: 1em 0;
+    width: 100%;
+    border: 2px solid #60686d;
+    padding: 10px;
+}
+#forms input[type=submit]{
+    display: block;
+    margin: 1.3em auto;
+    color: #a5a5a5;
+    border: none;
+    background-color: #212325;
+    padding: 10px 50px;
+}
 #table{
     grid-area: tabela;
 }
 #organizacao{
     grid-area: org;
+}
+#organizacao p{
+    margin-top: 1em;
 }
 #imagemA{
     grid-area: imgA;
