@@ -1,0 +1,6 @@
+while tamanhoDosCanos:
+    if(i < len(tamanhoDosCanos)):
+        print(tamanhoDosCanos[i])
+        i+=1
+    else:
+        break
