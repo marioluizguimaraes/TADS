@@ -6,6 +6,8 @@ def primo_r(n, div):
             return primo_r(n, div-1) + 1
         else:
             return primo_r(n, div-1) + 0
+    
+    
             
 def primo(n):
 
